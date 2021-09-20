@@ -8,8 +8,8 @@ const generateTarget = () =>{
     let random = Math.floor(Math.random() * 10);
     return random;
 }
-const CompareGuesses = (humanNum, machinNum, secretNum) => {
-    secretNum = generateTarget;
+const compareGuesses = (humanNum, machinNum, secretNum) => {
+    secretNum = generateTarget();
     machinNum = Math.floor(Math.random() * 10);
     distansceComputer = Math.abs(machinNum, secretNum);
     distanceHuman = Math.abs(humanNum, secretNum);
@@ -20,3 +20,16 @@ const CompareGuesses = (humanNum, machinNum, secretNum) => {
         return false;
     }
 };
+const updateScore = winner => {
+    if(winner === 'human'){
+        humanScore ++;
+    }
+    else if(winner === 'computer'){
+        computerScore ++;
+    }
+}
+
+const advanceRound = () =>{
+    currentRoundNumber ++;
+}
+
