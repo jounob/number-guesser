@@ -9,11 +9,17 @@ const generateTarget = () =>{
     return random;
 }
 const compareGuesses = (humanNum, machinNum, secretNum) => {
-    secretNum = generateTarget();
-    machinNum = Math.floor(Math.random() * 10);
-    distansceComputer = Math.abs(machinNum, secretNum);
-    distanceHuman = Math.abs(humanNum, secretNum);
-    if(distanceHuman <= distansceComputer){
+    //secretNum = generateTarget();
+    //machinNum = Math.floor(Math.random() * 10);
+    console.log(secretNum);
+
+    distanceComputer = Math.abs(machinNum - secretNum);
+    console.log("machin num " + machinNum)
+    
+    distanceHuman = Math.abs(secretNum - humanNum);
+    console.log("human num " + humanNum)
+    
+    if(distanceHuman <= distanceComputer){
         return true;
     }
     else {
